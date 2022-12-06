@@ -13,6 +13,26 @@ double my_pow(double num, unsigned int degree)
     return result;
 }
 
+double my_pow2(double num, unsigned int degree)
+{
+	long result = 1;
+    while (degree)
+    {
+        if (degree % 2 == 0)
+        {
+            degree /= 2;
+            num *= num;
+        }
+        else
+        {
+            degree--;
+            result *= num;
+        }
+    }
+
+    return result;
+}
+
 int main()
 {
 	double num;
